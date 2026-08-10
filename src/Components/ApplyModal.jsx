@@ -212,6 +212,13 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
+  const getNextReferenceNumber = () => {
+    const currentCount = parseInt(localStorage.getItem("erimbe_app_ref_count") || "100", 10);
+    const validCount = isNaN(currentCount) || currentCount < 100 ? 100 : currentCount;
+    localStorage.setItem("erimbe_app_ref_count", (validCount + 1).toString());
+    return `ERIMBE-2026-${validCount}`;
+  };
+
   const handleSubmit = async () => {
     if (!validateStep(7)) {
       setCurrentStep(7);
@@ -219,7 +226,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
     }
 
     setSubmitting(true);
-    const generatedRef = `ERIMBE-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+    const generatedRef = getNextReferenceNumber();
 
     const fullPayload = {
       ...formData,
@@ -272,7 +279,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
             <h1>ERIMBE BIBLE COLLEGE</h1>
             <p>Alapako, Lagos-Ibadan Expressway, Opposite Govamit, Ogun State, Nigeria</p>
             <p>Tel: +234 708 737 0199 / 08167398026 | Official Online Admission Application</p>
-            <div class="ref-badge">APPLICATION REF: ${referenceNo || 'ERIMBE-2026'}</div>
+            <div class="ref-badge">APPLICATION REF: ${referenceNo || 'ERIMBE-2026-100'}</div>
           </div>
 
           <div class="section">
