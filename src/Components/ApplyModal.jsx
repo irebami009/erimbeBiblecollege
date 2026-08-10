@@ -270,8 +270,8 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
         <body>
           <div class="header">
             <h1>ERIMBE BIBLE COLLEGE</h1>
-            <p>NO. 3, MOSADOLUWA HOUSE, OROGUN, IBADAN.</p>
-            <p>Tel: 08167398026 | Official Online Admission Application</p>
+            <p>Alapako, Lagos-Ibadan Expressway, Opposite Govamit, Ogun State, Nigeria</p>
+            <p>Tel: +234 708 737 0199 / 08167398026 | Official Online Admission Application</p>
             <div class="ref-badge">APPLICATION REF: ${referenceNo || 'ERIMBE-2026'}</div>
           </div>
 
@@ -341,60 +341,60 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 lg:p-6 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
       
       {/* PURE WHITE APPLICATION CONTAINER */}
-      <div className="relative w-full max-w-[1150px] my-auto rounded-3xl bg-white text-[#111827] shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-[1150px] my-auto rounded-2xl sm:rounded-3xl bg-white text-[#111827] shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[94vh] sm:max-h-[90vh]">
         
         {/* TOP COLLEGE HEADER */}
-        <div className="bg-white border-b border-slate-200 p-6 sm:p-8 text-center relative shrink-0">
+        <div className="bg-white border-b border-slate-200 p-4 sm:p-6 lg:p-8 text-center relative shrink-0">
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition cursor-pointer"
+            className="absolute top-3 right-3 sm:top-5 sm:right-5 p-2 sm:p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition cursor-pointer"
             title="Close Application"
           >
-            <X className="h-5 w-5" />
+            <X className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
 
-          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] font-bold text-xs uppercase tracking-widest mb-2">
+          <div className="inline-flex items-center justify-center gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1.5 sm:mb-2">
             <span>Official Admission Portal</span>
           </div>
 
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0F172A] tracking-tight uppercase">
+          <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-[#0F172A] tracking-tight uppercase px-4">
             ERIMBE BIBLE COLLEGE
           </h1>
 
-          <p className="text-xs sm:text-sm text-[#6B7280] font-medium mt-1">
-            NO. 3, MOSADOLUWA HOUSE, OROGUN, IBADAN. &bull; Tel: 08167398026
+          <p className="text-[11px] sm:text-xs md:text-sm text-[#6B7280] font-medium mt-1 max-w-2xl mx-auto leading-relaxed px-2">
+            Alapako, Lagos-Ibadan Expressway, Opposite Govamit, Ogun State, Nigeria &bull; Tel: +234 708 737 0199 / 08167398026
           </p>
 
-          <div className="mt-3 inline-block px-5 py-1.5 rounded-full bg-[#0F172A] text-white text-xs font-bold uppercase tracking-wider">
+          <div className="mt-2.5 sm:mt-3 inline-block px-4 py-1 sm:px-5 sm:py-1.5 rounded-full bg-[#0F172A] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider">
             ADMISSION APPLICATION
           </div>
         </div>
 
         {/* SUCCESS SCREEN STATE */}
         {isSubmitted ? (
-          <div className="p-8 sm:p-12 text-center my-auto space-y-6 max-w-2xl mx-auto animate-in zoom-in-95">
-            <div className="w-20 h-20 bg-[#D4AF37]/20 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mx-auto text-[#0F172A]">
-              <CheckCircle2 className="h-10 w-10 text-[#D4AF37]" />
+          <div className="p-6 sm:p-10 lg:p-12 text-center my-auto space-y-5 sm:space-y-6 max-w-2xl mx-auto animate-in zoom-in-95">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#D4AF37]/20 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mx-auto text-[#0F172A]">
+              <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10 text-[#D4AF37]" />
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0F172A]">
                 Application Submitted Successfully
               </h2>
-              <p className="text-sm text-[#6B7280] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#6B7280] leading-relaxed">
                 Thank you for applying to <strong>Erimbe Bible College</strong>. Your application record has been logged and delivered to our admissions office.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] text-center max-w-md mx-auto">
-              <span className="text-xs text-[#6B7280] font-bold uppercase block mb-1">Application Reference Number</span>
-              <span className="text-xl font-extrabold text-[#0F172A] tracking-wider">{referenceNo}</span>
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] text-center max-w-md mx-auto">
+              <span className="text-[10px] sm:text-xs text-[#6B7280] font-bold uppercase block mb-1">Application Reference Number</span>
+              <span className="text-lg sm:text-xl font-extrabold text-[#0F172A] tracking-wider">{referenceNo}</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
               <button
                 onClick={printApplicationSummary}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-bold text-sm shadow-md transition cursor-pointer flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-bold text-xs sm:text-sm shadow-md transition cursor-pointer flex items-center justify-center gap-2"
               >
                 <Download className="h-4 w-4" />
                 <span>Download Application Summary</span>
@@ -402,7 +402,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
 
               <button
                 onClick={onClose}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white border border-[#E5E7EB] hover:bg-slate-50 text-[#111827] font-semibold text-sm transition cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white border border-[#E5E7EB] hover:bg-slate-50 text-[#111827] font-semibold text-xs sm:text-sm transition cursor-pointer"
               >
                 Back to Home
               </button>
@@ -411,7 +411,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
         ) : (
           <>
             {/* STEP PROGRESS INDICATOR BAR */}
-            <div className="bg-[#F8FAFC] border-b border-[#E5E7EB] px-4 py-3 shrink-0 overflow-x-auto">
+            <div className="bg-[#F8FAFC] border-b border-[#E5E7EB] px-3 sm:px-4 py-2.5 shrink-0 overflow-x-auto select-none">
               <div className="flex items-center justify-between min-w-max gap-2 sm:gap-4 max-w-5xl mx-auto">
                 {STEPS.map((step) => {
                   const isActive = currentStep === step.id;
@@ -422,7 +422,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                       key={step.id}
                       onClick={() => isDone && setCurrentStep(step.id)}
                       disabled={!isDone && currentStep !== step.id}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold transition ${
+                      className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold transition ${
                         isActive
                           ? "bg-[#0F172A] text-[#D4AF37] shadow-sm"
                           : isDone
@@ -431,7 +431,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                       }`}
                     >
                       <span
-                        className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${
+                        className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center text-[9px] sm:text-[10px] ${
                           isActive
                             ? "bg-[#D4AF37] text-[#0F172A]"
                             : isDone
@@ -450,13 +450,13 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
             </div>
 
             {/* FORM BODY CONTAINER */}
-            <div className="p-6 sm:p-10 overflow-y-auto flex-1 bg-white">
+            <div className="p-4 sm:p-8 lg:p-10 overflow-y-auto flex-1 bg-white">
               
               {/* STEP 1: COURSE SELECTION */}
               {currentStep === 1 && (
                 <div className="space-y-6 animate-in fade-in max-w-3xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 01 — Course Selection</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 01 — Course Selection</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Choose your desired program of study at Erimbe Bible College.</p>
                   </div>
 
@@ -474,21 +474,21 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         <div
                           key={programOption}
                           onClick={() => handleInputChange("program", programOption)}
-                          className={`p-4 rounded-2xl border transition cursor-pointer flex items-center justify-between ${
+                          className={`p-3.5 sm:p-4 rounded-2xl border transition cursor-pointer flex items-center justify-between ${
                             isSelected
                               ? "bg-[#F8FAFC] border-[#D4AF37] shadow-sm ring-1 ring-[#D4AF37]"
                               : "bg-white border-[#E5E7EB] hover:border-slate-300 hover:bg-slate-50"
                           }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${
+                            <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full border flex items-center justify-center ${
                               isSelected ? "border-[#D4AF37] bg-[#0F172A]" : "border-slate-300"
                             }`}>
-                              {isSelected && <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />}
+                              {isSelected && <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#D4AF37]" />}
                             </div>
-                            <span className="text-sm font-bold text-[#111827]">{programOption}</span>
+                            <span className="text-xs sm:text-sm font-bold text-[#111827]">{programOption}</span>
                           </div>
-                          {isSelected && <span className="text-xs font-bold text-[#D4AF37]">Selected</span>}
+                          {isSelected && <span className="text-[10px] sm:text-xs font-bold text-[#D4AF37]">Selected</span>}
                         </div>
                       );
                     })}
@@ -498,13 +498,13 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
 
               {/* STEP 2: PERSONAL INFORMATION */}
               {currentStep === 2 && (
-                <div className="space-y-6 animate-in fade-in max-w-4xl mx-auto">
+                <div className="space-y-5 sm:space-y-6 animate-in fade-in max-w-4xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 02 — Personal Information</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 02 — Personal Information</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Provide your full personal and contact details.</p>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#111827] mb-1">Surname *</label>
                       <input
@@ -512,7 +512,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Surname"
                         value={formData.surname}
                         onChange={(e) => handleInputChange("surname", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                           validationErrors.surname ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -525,7 +525,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={(e) => handleInputChange("firstName", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                           validationErrors.firstName ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -538,19 +538,19 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Other Names"
                         value={formData.otherNames}
                         onChange={(e) => handleInputChange("otherNames", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#111827] mb-1">Date of Birth</label>
                       <input
                         type="date"
                         value={formData.dateOfBirth}
                         onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                     <div>
@@ -560,7 +560,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Age"
                         value={formData.age}
                         onChange={(e) => handleInputChange("age", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                     <div>
@@ -568,7 +568,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                       <select
                         value={formData.gender}
                         onChange={(e) => handleInputChange("gender", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       >
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -580,12 +580,12 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         type="text"
                         value={formData.nationality}
                         onChange={(e) => handleInputChange("nationality", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#111827] mb-1">Telephone Number *</label>
                       <input
@@ -593,7 +593,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="+234 816 739 8026"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                           validationErrors.phone ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -606,7 +606,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="applicant@example.com"
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                           validationErrors.email ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -617,7 +617,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                       <select
                         value={formData.maritalStatus}
                         onChange={(e) => handleInputChange("maritalStatus", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       >
                         <option value="Single">Single</option>
                         <option value="Married">Married</option>
@@ -635,7 +635,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="e.g. Teacher, Civil Servant, Business"
                         value={formData.occupation}
                         onChange={(e) => handleInputChange("occupation", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                     <div>
@@ -645,7 +645,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Workplace Address"
                         value={formData.workplaceAddress}
                         onChange={(e) => handleInputChange("workplaceAddress", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
                   </div>
@@ -658,7 +658,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Current residential address"
                         value={formData.residentialAddress}
                         onChange={(e) => handleInputChange("residentialAddress", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none resize-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none resize-none ${
                           validationErrors.residentialAddress ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -671,7 +671,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Postal address (if different)"
                         value={formData.postalAddress}
                         onChange={(e) => handleInputChange("postalAddress", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A] resize-none"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A] resize-none"
                       />
                     </div>
                   </div>
@@ -682,12 +682,12 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
               {currentStep === 3 && (
                 <div className="space-y-6 animate-in fade-in max-w-3xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 03 — Sponsorship</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 03 — Sponsorship</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Indicate financial sponsorship for your tuition and academic expenses.</p>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <label className="block text-sm font-bold text-[#111827]">Are you self-sponsored?</label>
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <label className="block text-xs sm:text-sm font-bold text-[#111827]">Are you self-sponsored?</label>
                     <div className="flex items-center gap-6">
                       {["Yes", "No"].map((opt) => (
                         <label key={opt} className="flex items-center gap-2 cursor-pointer">
@@ -699,15 +699,15 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             onChange={(e) => handleInputChange("isSelfSponsored", e.target.value)}
                             className="w-4 h-4 text-[#0F172A] accent-[#0F172A]"
                           />
-                          <span className="text-sm font-medium text-[#111827]">{opt}</span>
+                          <span className="text-xs sm:text-sm font-medium text-[#111827]">{opt}</span>
                         </label>
                       ))}
                     </div>
                   </div>
 
                   {formData.isSelfSponsored === "No" && (
-                    <div className="space-y-4 p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs animate-in fade-in">
-                      <h3 className="text-sm font-bold text-[#0F172A] border-b border-[#E5E7EB] pb-2">Sponsor Details</h3>
+                    <div className="space-y-4 p-4 sm:p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs animate-in fade-in">
+                      <h3 className="text-xs sm:text-sm font-bold text-[#0F172A] border-b border-[#E5E7EB] pb-2">Sponsor Details</h3>
                       
                       <div>
                         <label className="block text-xs font-bold text-[#111827] mb-1">Sponsor Name(s) *</label>
@@ -716,7 +716,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="Name of Sponsor or Organization"
                           value={formData.sponsorName}
                           onChange={(e) => handleInputChange("sponsorName", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                         />
                         {validationErrors.sponsorName && <span className="text-[11px] text-red-500 mt-1 block">{validationErrors.sponsorName}</span>}
                       </div>
@@ -729,7 +729,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             placeholder="Sponsor Phone"
                             value={formData.sponsorPhone}
                             onChange={(e) => handleInputChange("sponsorPhone", e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                            className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                           />
                         </div>
                         <div>
@@ -739,7 +739,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             placeholder="Sponsor Residential/Workplace Address"
                             value={formData.sponsorAddress}
                             onChange={(e) => handleInputChange("sponsorAddress", e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                            className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                           />
                         </div>
                       </div>
@@ -752,7 +752,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
               {currentStep === 4 && (
                 <div className="space-y-6 animate-in fade-in max-w-3xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 04 — Next of Kin</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 04 — Next of Kin</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Emergency contact information for official college records.</p>
                   </div>
 
@@ -764,7 +764,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Next of Kin Name"
                         value={formData.nextOfKinName}
                         onChange={(e) => handleInputChange("nextOfKinName", e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                        className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                           validationErrors.nextOfKinName ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                         }`}
                       />
@@ -777,7 +777,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         <select
                           value={formData.relationship}
                           onChange={(e) => handleInputChange("relationship", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                         >
                           <option value="Spouse">Spouse</option>
                           <option value="Parent/Guardian">Parent / Guardian</option>
@@ -793,7 +793,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             placeholder="e.g. Sibling, Relative"
                             value={formData.otherRelationship}
                             onChange={(e) => handleInputChange("otherRelationship", e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                            className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                           />
                         </div>
                       )}
@@ -805,7 +805,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="Next of Kin Phone"
                           value={formData.nextOfKinPhone}
                           onChange={(e) => handleInputChange("nextOfKinPhone", e.target.value)}
-                          className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none ${
+                          className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                             validationErrors.nextOfKinPhone ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                           }`}
                         />
@@ -819,7 +819,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Residential address of Next of Kin"
                         value={formData.nextOfKinAddress}
                         onChange={(e) => handleInputChange("nextOfKinAddress", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A] resize-none"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A] resize-none"
                       />
                     </div>
                   </div>
@@ -830,13 +830,13 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
               {currentStep === 5 && (
                 <div className="space-y-6 animate-in fade-in max-w-3xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 05 — Spiritual Qualification</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 05 — Spiritual Qualification</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Sharing your Christian experience, salvation testimony, and divine calling.</p>
                   </div>
 
                   {/* Question 1: Born Again */}
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <label className="block text-sm font-bold text-[#111827]">Are you born again?</label>
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <label className="block text-xs sm:text-sm font-bold text-[#111827]">Are you born again?</label>
                     <div className="flex items-center gap-6">
                       {["Yes", "No"].map((opt) => (
                         <label key={opt} className="flex items-center gap-2 cursor-pointer">
@@ -848,7 +848,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             onChange={(e) => handleInputChange("isBornAgain", e.target.value)}
                             className="w-4 h-4 accent-[#0F172A]"
                           />
-                          <span className="text-sm font-medium text-[#111827]">{opt}</span>
+                          <span className="text-xs sm:text-sm font-medium text-[#111827]">{opt}</span>
                         </label>
                       ))}
                     </div>
@@ -862,7 +862,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             placeholder="State when you were born again"
                             value={formData.bornAgainWhen}
                             onChange={(e) => handleInputChange("bornAgainWhen", e.target.value)}
-                            className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                           />
                         </div>
 
@@ -873,7 +873,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             placeholder="State your salvation experience (use additional details if necessary)..."
                             value={formData.salvationExperience}
                             onChange={(e) => handleInputChange("salvationExperience", e.target.value)}
-                            className={`w-full px-4 py-3 rounded-xl bg-white border text-sm focus:outline-none resize-none ${
+                            className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none resize-none ${
                               validationErrors.salvationExperience ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                             }`}
                           />
@@ -884,8 +884,8 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                   </div>
 
                   {/* Question 2: Holy Spirit Baptism */}
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <label className="block text-sm font-bold text-[#111827]">Have you been baptized in the Spirit?</label>
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <label className="block text-xs sm:text-sm font-bold text-[#111827]">Have you been baptized in the Spirit?</label>
                     <div className="flex items-center gap-6">
                       {["Yes", "No"].map((opt) => (
                         <label key={opt} className="flex items-center gap-2 cursor-pointer">
@@ -897,7 +897,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             onChange={(e) => handleInputChange("isSpiritBaptized", e.target.value)}
                             className="w-4 h-4 accent-[#0F172A]"
                           />
-                          <span className="text-sm font-medium text-[#111827]">{opt}</span>
+                          <span className="text-xs sm:text-sm font-medium text-[#111827]">{opt}</span>
                         </label>
                       ))}
                     </div>
@@ -910,15 +910,15 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="State how you were baptized in the Spirit..."
                           value={formData.holySpiritBaptismDetails}
                           onChange={(e) => handleInputChange("holySpiritBaptismDetails", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A] resize-none"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A] resize-none"
                         />
                       </div>
                     )}
                   </div>
 
                   {/* Question 3: Call to Service */}
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <label className="block text-sm font-bold text-[#111827]">Do you have a call to service in God's vineyard?</label>
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <label className="block text-xs sm:text-sm font-bold text-[#111827]">Do you have a call to service in God's vineyard?</label>
                     <div className="flex items-center gap-6">
                       {["Yes", "No"].map((opt) => (
                         <label key={opt} className="flex items-center gap-2 cursor-pointer">
@@ -930,7 +930,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                             onChange={(e) => handleInputChange("hasDivineCall", e.target.value)}
                             className="w-4 h-4 accent-[#0F172A]"
                           />
-                          <span className="text-sm font-medium text-[#111827]">{opt}</span>
+                          <span className="text-xs sm:text-sm font-medium text-[#111827]">{opt}</span>
                         </label>
                       ))}
                     </div>
@@ -943,7 +943,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="State your office and gift(s)..."
                           value={formData.divineCallDetails}
                           onChange={(e) => handleInputChange("divineCallDetails", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A] resize-none"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A] resize-none"
                         />
                       </div>
                     )}
@@ -955,13 +955,13 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
               {currentStep === 6 && (
                 <div className="space-y-6 animate-in fade-in max-w-4xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 06 — Educational Qualification</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 06 — Educational Qualification</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">(State sequence of school(s) attended)</p>
                   </div>
 
                   {/* DYNAMIC EDUCATION TABLE */}
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
                       <label className="block text-xs font-bold text-[#111827] uppercase tracking-wider">Schools Attended</label>
                       <button
                         type="button"
@@ -973,15 +973,15 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                       </button>
                     </div>
 
-                    <div className="border border-[#E5E7EB] rounded-2xl overflow-hidden bg-white shadow-xs">
-                      <table className="w-full text-left text-xs sm:text-sm">
+                    <div className="border border-[#E5E7EB] rounded-2xl overflow-x-auto bg-white shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm min-w-[500px]">
                         <thead className="bg-[#F8FAFC] border-b border-[#E5E7EB] text-[#0F172A] font-bold">
                           <tr>
-                            <th className="p-3 w-12 text-center">No.</th>
+                            <th className="p-3 w-10 text-center">No.</th>
                             <th className="p-3">Schools Attended</th>
                             <th className="p-3">Qualification</th>
                             <th className="p-3 w-28">Date</th>
-                            <th className="p-3 w-12 text-center">Action</th>
+                            <th className="p-3 w-10 text-center">Action</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-[#E5E7EB]">
@@ -994,7 +994,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                                   placeholder="Schools Attended"
                                   value={edu.schoolAttended}
                                   onChange={(e) => handleEducationChange(idx, "schoolAttended", e.target.value)}
-                                  className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
+                                  className="w-full px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
                                 />
                               </td>
                               <td className="p-2">
@@ -1003,7 +1003,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                                   placeholder="qualification"
                                   value={edu.qualification}
                                   onChange={(e) => handleEducationChange(idx, "qualification", e.target.value)}
-                                  className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
+                                  className="w-full px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
                                 />
                               </td>
                               <td className="p-2">
@@ -1012,7 +1012,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                                   placeholder="Date"
                                   value={edu.year}
                                   onChange={(e) => handleEducationChange(idx, "year", e.target.value)}
-                                  className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
+                                  className="w-full px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-white border border-[#E5E7EB] text-xs focus:outline-none focus:border-[#0F172A]"
                                 />
                               </td>
                               <td className="p-2 text-center">
@@ -1032,7 +1032,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         </tbody>
                       </table>
                     </div>
-                    <p className="text-[11px] text-[#6B7280] font-medium italic pt-1">
+                    <p className="text-[10px] sm:text-[11px] text-[#6B7280] font-medium italic pt-1 leading-relaxed">
                       (Attach supporting documents to all your qualifications, including marriage certificate if married)
                     </p>
                   </div>
@@ -1050,9 +1050,9 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         />
                         <div className="flex flex-col items-center">
                           {photoPreview ? (
-                            <img src={photoPreview} alt="Passport Preview" className="w-16 h-16 rounded-xl object-cover border mb-2" />
+                            <img src={photoPreview} alt="Passport Preview" className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover border mb-2" />
                           ) : (
-                            <Upload className="h-6 w-6 text-[#D4AF37] mb-1" />
+                            <Upload className="h-5 w-5 sm:h-6 sm:w-6 text-[#D4AF37] mb-1" />
                           )}
                           <span className="text-xs font-bold text-[#111827]">
                             {passportPhoto ? passportPhoto.name : "Upload Passport Photo"}
@@ -1072,7 +1072,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                         />
                         <div className="flex flex-col items-center">
-                          <FileText className="h-6 w-6 text-[#D4AF37] mb-1" />
+                          <FileText className="h-5 w-5 sm:h-6 sm:w-6 text-[#D4AF37] mb-1" />
                           <span className="text-xs font-bold text-[#111827]">
                             {academicDoc ? academicDoc.name : "Attach Documents"}
                           </span>
@@ -1086,24 +1086,24 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
 
               {/* STEP 7: ATTESTATION */}
               {currentStep === 7 && (
-                <div className="space-y-8 animate-in fade-in max-w-4xl mx-auto">
+                <div className="space-y-6 sm:space-y-8 animate-in fade-in max-w-4xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3">
-                    <h2 className="text-xl font-bold text-[#0F172A]">Step 07 — Official Attestation</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 07 — Official Attestation</h2>
                     <p className="text-xs text-[#6B7280] mt-0.5">Ministerial attestation and student declaration as per college form.</p>
                   </div>
 
                   {/* SECTION A: MINISTER / PASTOR ATTESTATION */}
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2">
-                      <h3 className="text-xs sm:text-sm font-extrabold text-[#0F172A] uppercase tracking-wide">
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 gap-2">
+                      <h3 className="text-xs sm:text-sm font-extrabold text-[#0F172A] uppercase tracking-wide leading-snug">
                         ATTESTATION (TO BE DONE BY ASSEMBLY PASTOR ANY OTHER MINISTER IN THE ASSEMBLY OR ANY ORDAINED MINISTER OF GOD).
                       </h3>
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 shrink-0">Required</span>
                     </div>
 
-                    <div className="text-xs text-[#334155] font-medium leading-relaxed bg-white p-4 rounded-xl border border-[#E5E7EB] space-y-2">
+                    <div className="text-xs text-[#334155] font-medium leading-relaxed bg-white p-3.5 sm:p-4 rounded-xl border border-[#E5E7EB]">
                       <p>
-                        I <strong className="text-[#0F172A] border-b border-slate-400 px-2">{formData.ministerName || "________________________"}</strong> solemnly attest on behalf of <strong className="text-[#0F172A] border-b border-slate-400 px-2">{`${formData.surname} ${formData.firstName} ${formData.otherNames}`.trim() || "________________________"}</strong> that he/she shall be of good behaviour; I confirm on my honours that he/she shall abide by the college rules and shall uplift the status of the school to the glory of the Father, of the Son, and of the Holy Spirit (Amen).
+                        I <strong className="text-[#0F172A] border-b border-slate-400 px-1.5">{formData.ministerName || "________________________"}</strong> solemnly attest on behalf of <strong className="text-[#0F172A] border-b border-slate-400 px-1.5">{`${formData.surname} ${formData.firstName} ${formData.otherNames}`.trim() || "________________________"}</strong> that he/she shall be of good behaviour; I confirm on my honours that he/she shall abide by the college rules and shall uplift the status of the school to the glory of the Father, of the Son, and of the Holy Spirit (Amen).
                       </p>
                     </div>
 
@@ -1115,7 +1115,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="Rev. / Pastor Name"
                           value={formData.ministerName}
                           onChange={(e) => handleInputChange("ministerName", e.target.value)}
-                          className={`w-full px-4 py-2.5 rounded-xl bg-white border text-sm focus:outline-none ${
+                          className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border text-xs sm:text-sm focus:outline-none ${
                             validationErrors.ministerName ? "border-red-500" : "border-[#E5E7EB] focus:border-[#0F172A]"
                           }`}
                         />
@@ -1128,7 +1128,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           placeholder="Phone Number"
                           value={formData.ministerPhone}
                           onChange={(e) => handleInputChange("ministerPhone", e.target.value)}
-                          className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                         />
                       </div>
                     </div>
@@ -1140,7 +1140,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                         placeholder="Church Address"
                         value={formData.ministerChurchAddress}
                         onChange={(e) => handleInputChange("ministerChurchAddress", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm focus:outline-none focus:border-[#0F172A]"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm focus:outline-none focus:border-[#0F172A]"
                       />
                     </div>
 
@@ -1159,17 +1159,17 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                   </div>
 
                   {/* SECTION B: STUDENT'S ATTESTATION */}
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
-                    <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2">
-                      <h3 className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wide">
+                  <div className="p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-[#E5E7EB] space-y-4">
+                    <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 gap-2">
+                      <h3 className="text-xs sm:text-sm font-extrabold text-[#0F172A] uppercase tracking-wide">
                         STUDENT'S ATTESTATION
                       </h3>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Required</span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 shrink-0">Required</span>
                     </div>
 
-                    <div className="text-xs text-[#334155] font-medium leading-relaxed bg-white p-4 rounded-xl border border-[#E5E7EB]">
+                    <div className="text-xs text-[#334155] font-medium leading-relaxed bg-white p-3.5 sm:p-4 rounded-xl border border-[#E5E7EB]">
                       <p>
-                        I <strong className="text-[#0F172A] border-b border-slate-400 px-2">{`${formData.surname} ${formData.firstName} ${formData.otherNames}`.trim() || "________________________"}</strong> confirm that all the information supplied above are true position of myself I shall be grateful if my application is considered. Thank you.
+                        I <strong className="text-[#0F172A] border-b border-slate-400 px-1.5">{`${formData.surname} ${formData.firstName} ${formData.otherNames}`.trim() || "________________________"}</strong> confirm that all the information supplied above are true position of myself I shall be grateful if my application is considered. Thank you.
                       </p>
                     </div>
 
@@ -1180,7 +1180,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           type="text"
                           readOnly
                           value={`${formData.surname} ${formData.firstName} ${formData.otherNames}`.trim() || "Applicant Name"}
-                          className="w-full px-4 py-2.5 rounded-xl bg-slate-100 border border-[#E5E7EB] text-[#111827] text-sm font-bold"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-100 border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm font-bold"
                         />
                       </div>
                       <div>
@@ -1189,7 +1189,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                           type="date"
                           value={formData.studentDate}
                           onChange={(e) => handleInputChange("studentDate", e.target.value)}
-                          className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-sm"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E5E7EB] text-[#111827] text-xs sm:text-sm"
                         />
                       </div>
                     </div>
@@ -1215,7 +1215,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                 <div className="space-y-6 animate-in fade-in max-w-4xl mx-auto">
                   <div className="border-b border-[#E5E7EB] pb-3 flex items-center justify-between">
                     <div>
-                      <h2 className="text-xl font-bold text-[#0F172A]">Step 08 — Review & Submit</h2>
+                      <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">Step 08 — Review & Submit</h2>
                       <p className="text-xs text-[#6B7280] mt-0.5">Carefully verify all your information before final submission.</p>
                     </div>
                   </div>
@@ -1223,7 +1223,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     
                     {/* Course Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">01. Course Information</span>
                         <button onClick={() => setCurrentStep(1)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1234,7 +1234,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                     </div>
 
                     {/* Personal Info Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">02. Personal Information</span>
                         <button onClick={() => setCurrentStep(2)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1247,7 +1247,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                     </div>
 
                     {/* Sponsorship Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">03. Sponsorship</span>
                         <button onClick={() => setCurrentStep(3)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1259,7 +1259,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                     </div>
 
                     {/* Next of Kin Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">04. Next of Kin</span>
                         <button onClick={() => setCurrentStep(4)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1271,7 +1271,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                     </div>
 
                     {/* Spiritual Qualification Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">05. Spiritual Qualification</span>
                         <button onClick={() => setCurrentStep(5)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1283,7 +1283,7 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                     </div>
 
                     {/* Education & Attestation Card */}
-                    <div className="p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs relative">
                       <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-2 mb-3">
                         <span className="text-xs font-bold uppercase text-[#0F172A]">06 & 07. Education & Attestation</span>
                         <button onClick={() => setCurrentStep(6)} className="text-xs text-[#D4AF37] font-bold flex items-center gap-1 hover:underline cursor-pointer">
@@ -1307,24 +1307,24 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
             </div>
 
             {/* MODAL FOOTER BUTTONS */}
-            <div className="bg-white border-t border-[#E5E7EB] px-6 py-4 flex items-center justify-between shrink-0">
+            <div className="bg-white border-t border-[#E5E7EB] px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between shrink-0 gap-2">
               <button
                 type="button"
                 onClick={prevStep}
                 disabled={currentStep === 1 || submitting}
-                className={`px-5 py-2.5 rounded-xl border border-[#E5E7EB] text-[#111827] font-semibold text-xs sm:text-sm transition flex items-center gap-1 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl border border-[#E5E7EB] text-[#111827] font-semibold text-xs sm:text-sm transition flex items-center gap-1 ${
                   currentStep === 1 || submitting ? "opacity-40 cursor-not-allowed" : "hover:bg-slate-50 cursor-pointer"
                 }`}
               >
                 <ChevronLeft className="h-4 w-4" />
-                <span>Previous Step</span>
+                <span>Previous</span>
               </button>
 
               {currentStep < 8 ? (
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-7 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-bold text-xs sm:text-sm shadow-md transition cursor-pointer flex items-center gap-1"
+                  className="px-5 sm:px-7 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-bold text-xs sm:text-sm shadow-md transition cursor-pointer flex items-center gap-1"
                 >
                   <span>Next Step</span>
                   <ChevronRight className="h-4 w-4" />
@@ -1334,9 +1334,9 @@ const ApplyModal = ({ isOpen, onClose, selectedCourse, onSubmitSuccess }) => {
                   type="button"
                   onClick={handleSubmit}
                   disabled={submitting}
-                  className="px-8 py-3 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-extrabold text-sm shadow-lg transition cursor-pointer flex items-center gap-2"
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#0F172A] font-extrabold text-xs sm:text-sm shadow-lg transition cursor-pointer flex items-center gap-2"
                 >
-                  {submitting ? "Submitting Application..." : "Submit Application →"}
+                  {submitting ? "Submitting..." : "Submit Application →"}
                 </button>
               )}
             </div>

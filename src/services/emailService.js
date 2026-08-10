@@ -92,9 +92,9 @@ export const sendApplicationEmail = async (appData, photoName, docName) => {
       
       <!-- Institution Header -->
       <div style="background-color: #0F172A; padding: 24px; text-align: center; border-radius: 12px 12px 0 0; color: #ffffff;">
-        <h2 style="color: #D4AF37; margin: 0 0 6px 0; font-size: 22px; font-weight: bold; text-transform: uppercase;">Christ the Source of Life Bible College</h2>
-        <p style="margin: 0; font-size: 12px; color: #cbd5e1;">NO. 3, MOSADOLUWA HOUSE, OROGUN, IBADAN.</p>
-        <p style="margin: 4px 0 0 0; font-size: 12px; color: #94a3b8;">Tel: 08167398026 | Ref: <strong style="color: #D4AF37;">${refNo}</strong></p>
+        <h2 style="color: #D4AF37; margin: 0 0 6px 0; font-size: 22px; font-weight: bold; text-transform: uppercase;">Erimbe Bible College</h2>
+        <p style="margin: 0; font-size: 12px; color: #cbd5e1;">Alapako, Lagos-Ibadan Expressway, Opposite Govamit, Ogun State, Nigeria</p>
+        <p style="margin: 4px 0 0 0; font-size: 12px; color: #94a3b8;">Tel: +234 708 737 0199 | Ref: <strong style="color: #D4AF37;">${refNo}</strong></p>
         <h3 style="margin: 12px 0 0 0; font-size: 16px; color: #ffffff; text-decoration: underline;">OFFICIAL ADMISSION APPLICATION</h3>
       </div>
 
@@ -107,8 +107,6 @@ export const sendApplicationEmail = async (appData, photoName, docName) => {
             <td style="padding: 6px 0; font-weight: bold; width: 35%;">Selected Program:</td>
             <td style="padding: 6px 0; color: #b45309; font-weight: bold;">${appData.program || "Not specified"}</td>
           </tr>
-          ${appData.serialNumber ? `<tr><td style="padding: 6px 0; font-weight: bold;">Serial Number:</td><td style="padding: 6px 0;">${appData.serialNumber}</td></tr>` : ''}
-          ${appData.matricNumber ? `<tr><td style="padding: 6px 0; font-weight: bold;">Matric Number:</td><td style="padding: 6px 0;">${appData.matricNumber}</td></tr>` : ''}
         </table>
 
         <!-- 02 PERSONAL INFORMATION -->
