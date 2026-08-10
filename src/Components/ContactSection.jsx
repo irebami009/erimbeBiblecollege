@@ -7,8 +7,10 @@ import {
   Send,
   CheckCircle2,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react";
 import Reveal from "./Reveal";
+import { sendContactInquiryEmail } from "../services/emailService";
 
 const contactCards = [
   {
@@ -43,26 +45,40 @@ const ContactSection = ({ onOpenApplyModal, onOpenExploreModal }) => {
     lastName: "",
     email: "",
     phone: "",
-    subject: "Admissions Inquiry",
+    subject: "Certificate in Theology",
     message: "",
   });
 
+  const [isSubjectOpen, setIsSubjectOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [statusError, setStatusError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "Admissions Inquiry",
-        message: "",
-      });
-    }, 4000);
+    setSubmitting(true);
+    setStatusError(null);
+
+    try {
+      await sendContactInquiryEmail(formData);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "Admissions Inquiry",
+          message: "",
+        });
+      }, 5000);
+    } catch (err) {
+      console.error("ReniMail contact delivery error:", err);
+      setStatusError(err.message || "Failed to send inquiry email.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -209,7 +225,13 @@ const ContactSection = ({ onOpenApplyModal, onOpenExploreModal }) => {
                 {submitted && (
                   <div className="mb-6 p-4 rounded-2xl bg-[#D4AF37]/20 border border-[#D4AF37]/50 text-[#0F172A] font-bold text-sm flex items-center gap-3 animate-in fade-in">
                     <CheckCircle2 className="h-5 w-5 text-[#D4AF37]" />
-                    <span>Thank you! Your message has been received. Our team will contact you shortly.</span>
+                    <span>Thank you! Your message has been received and sent to our admissions inbox.</span>
+                  </div>
+                )}
+
+                {statusError && (
+                  <div className="mb-6 p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-700 font-semibold text-xs sm:text-sm flex items-center gap-3 animate-in fade-in">
+                    <span>⚠️ {statusError}</span>
                   </div>
                 )}
 
@@ -264,18 +286,55 @@ const ContactSection = ({ onOpenApplyModal, onOpenExploreModal }) => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Subject</label>
-                    <select
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 text-sm transition"
+                  {/* CUSTOM PROGRAM / SUBJECT SELECTION DROPDOWN */}
+                  <div className="relative">
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5 flex justify-between items-center">
+                      <span>Program / Inquiry Topic *</span>
+                      <span className="text-[11px] text-[#D4AF37] font-semibold">Official College Programs</span>
+                    </label>
+                    
+                    <button
+                      type="button"
+                      onClick={() => setIsSubjectOpen(!isSubjectOpen)}
+                      className="w-full px-4 py-3 rounded-2xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 text-sm transition flex items-center justify-between shadow-xs cursor-pointer text-left"
                     >
-                      <option value="Admissions Inquiry">Admissions Inquiry</option>
-                      <option value="Academic Programs">Academic Programs</option>
-                      <option value="Scholarships & Financial Aid">Scholarships & Financial Aid</option>
-                      <option value="General Questions">General Questions</option>
-                    </select>
+                      <span className="font-medium text-slate-900">{formData.subject}</span>
+                      <ChevronDown className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${isSubjectOpen ? "rotate-180 text-[#D4AF37]" : ""}`} />
+                    </button>
+
+                    {isSubjectOpen && (
+                      <div className="absolute left-0 right-0 top-full mt-2 rounded-2xl bg-white border border-slate-200 shadow-2xl z-30 py-2 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+                        <div className="px-3 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider bg-slate-50 border-b border-slate-100 mb-1">
+                          Select Academic Program or Topic
+                        </div>
+                        {[
+                          "Certificate in Theology",
+                          "Diploma in Theology",
+                          "Certificate in Deliverance Studies",
+                          "Church Leadership and Administration",
+                          "General Admissions Inquiry",
+                          "Scholarships & Financial Aid"
+                        ].map((prog) => {
+                          const isSelected = formData.subject === prog;
+                          return (
+                            <button
+                              key={prog}
+                              type="button"
+                              onClick={() => {
+                                setFormData({ ...formData, subject: prog });
+                                setIsSubjectOpen(false);
+                              }}
+                              className={`w-full px-4 py-2.5 text-xs sm:text-sm text-left flex items-center justify-between transition hover:bg-slate-50 cursor-pointer ${
+                                isSelected ? "bg-[#D4AF37]/10 text-[#0F172A] font-bold" : "text-slate-700 font-medium"
+                              }`}
+                            >
+                              <span>{prog}</span>
+                              {isSelected && <span className="text-[#D4AF37] text-sm">✓</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
 
                   <div>
