@@ -76,7 +76,7 @@ export const sendEmailViaReniMail = async ({
 export const sendApplicationEmail = async (appData, photoName, docName) => {
   const { schoolEmail } = getReniMailConfig();
   const fullName = `${appData.surname || ''} ${appData.firstName || ''} ${appData.otherNames || ''}`.trim() || appData.fullName || "Applicant";
-  const refNo = appData.referenceNumber || `CSLBC-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+  const refNo = appData.referenceNumber || `ERIMBE-2026-${Math.floor(10000 + Math.random() * 90000)}`;
   const subject = `New Student Application: ${fullName} (${refNo})`;
 
   const schoolsHtml = Array.isArray(appData.educationHistory) && appData.educationHistory.length > 0
@@ -202,7 +202,7 @@ export const sendApplicationEmail = async (appData, photoName, docName) => {
     subject: subject,
     body: htmlBody,
     editorType: "html",
-    senderName: "Christ The Source of Life Admissions"
+    senderName: "EriMbe Bible College Admissions"
   });
 };
 
